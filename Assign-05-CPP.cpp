@@ -96,5 +96,6 @@ int main() {
             std::cout
             << "You must enter a number for both inputs."
             << std::endl;
+        }
     }while (playAgain == "Y" || playAgain == "YES");
 }
