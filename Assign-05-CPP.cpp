@@ -41,7 +41,8 @@ float surfaceAreaCalculate(float radius, float height) {
     return surfaceArea;
 }
 int main() {
-    // Declaring userRadius, userHeight, surfaceArea, circumference, area to floats
+    // Declaring userRadius, userHeight, surfaceArea,
+    // circumference, area to floats
     float userRadius, userHeight, surfaceArea, circumference, area;
     // Declaring userRadiusStr, userHeightStr, playAgain, userUnits to strings
     std::string userRadiusStr, userHeightStr, playAgain, userUnits;
@@ -70,12 +71,18 @@ int main() {
                 // Call surfaceAreaCalculate(userRadius, userHeight)
                 surfaceArea = surfaceAreaCalculate(userRadius, userHeight);
                 // Display the the surface area, area and circumference
-                std::cout << std::fixed << std::setprecision(2) << std::setfill('0')
-                << "The surface area is " << surfaceArea << " " << userUnits << "²" << "\n";
-                std::cout << std::fixed << std::setprecision(2) << std::setfill('0')
-                << "The circumference of the circle is " << circumference  << " " << userUnits << "\n";
-                std::cout << std::fixed << std::setprecision(2) << std::setfill('0') 
-                << "The area of the circle is " << area << " " << userUnits << "²" << "\n";
+                std::cout << std::fixed <<
+                std::setprecision(2) << std::setfill('0')
+                << "The surface area is " << surfaceArea
+                << " " << userUnits << "²" << "\n";
+                std::cout << std::fixed
+                << std::setprecision(2) << std::setfill('0')
+                << "The circumference of the circle is " << circumference
+                << " " << userUnits << "\n";
+                std::cout << std::fixed
+                << std::setprecision(2) << std::setfill('0')
+                << "The area of the circle is " << area
+                << " " << userUnits << "²" << "\n";
             } else {
                 std::cout << "Enter a number greater than 0\n";
             }
@@ -86,7 +93,8 @@ int main() {
             std::transform(playAgain.begin(), playAgain.end(),
                            playAgain.begin(), ::toupper);
         } catch (std::invalid_argument) {
-            std::cout << "You must enter a number for both inputs." << std::endl;
-        }
+            std::cout
+            << "You must enter a number for both inputs."
+            << std::endl;
     }while (playAgain == "Y" || playAgain == "YES");
 }
